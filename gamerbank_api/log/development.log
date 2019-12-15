@@ -1,0 +1,220 @@
+  [1m[35m (571.8ms)[0m  [1m[35mCREATE DATABASE "gamerbank_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (443.9ms)[0m  [1m[35mCREATE DATABASE "gamerbank_api_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2019-12-14 18:28:10 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/adesegunadedeji/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/adesegunadedeji/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.2ms | Allocations: 480)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 0.0ms | Allocations: 2610)
+
+
+  [1m[35m (39.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4089944164203777810)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGamers (20191214233704)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE "gamers" ("id" bigserial primary key, "title" character varying, "genre" character varying, "platform" character varying, "image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (4.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191214233704"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (3.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-12-14 23:49:13.130564"], ["updated_at", "2019-12-14 23:49:13.130564"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(4089944164203777810)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2019-12-14 18:50:03 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/adesegunadedeji/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/adesegunadedeji/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-6.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.1ms | Allocations: 307)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 1515)
+
+
+Started GET "/gamer" for ::1 at 2019-12-14 18:50:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/gamer"):
+  
+actionpack (6.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/gamers" for ::1 at 2019-12-14 18:50:14 -0500
+Processing by GamersController#index as HTML
+  [1m[36mGamer Load (4.2ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 4.6ms | ActiveRecord: 8.1ms | Allocations: 1848)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (2.8ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Hearthstone"], ["genre", "Multiplayer online battle arena"], ["platform", "Nintendo 64"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.941543"], ["updated_at", "2019-12-14 23:54:15.941543"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Wolfenstein 3D"], ["genre", "Survival"], ["platform", "Sega Dreamcast"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.948812"], ["updated_at", "2019-12-14 23:54:15.948812"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ricochet"], ["genre", "Adventure"], ["platform", "PlayStation 2"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.952338"], ["updated_at", "2019-12-14 23:54:15.952338"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Infamous"], ["genre", "Platformer"], ["platform", "GameCube"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.955380"], ["updated_at", "2019-12-14 23:54:15.955380"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pokémon Sapphire"], ["genre", "Third-person shooter"], ["platform", "Nintendo Entertainment System"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.958169"], ["updated_at", "2019-12-14 23:54:15.958169"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (1.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pokémon Pearl"], ["genre", "Real-time strategy"], ["platform", "Nintendo DSi"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.961308"], ["updated_at", "2019-12-14 23:54:15.961308"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Call of Duty: Black Ops 4"], ["genre", "Platformer"], ["platform", "Sega Saturn"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.966197"], ["updated_at", "2019-12-14 23:54:15.966197"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Pokémon LeafGreen"], ["genre", "Puzzle"], ["platform", "PlayStation 4"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.969148"], ["updated_at", "2019-12-14 23:54:15.969148"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (1.1ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ice Climbers"], ["genre", "Sports"], ["platform", "Sega Genesis"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.972329"], ["updated_at", "2019-12-14 23:54:15.972329"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Mario Kart Wii"], ["genre", "Tactical role-playing"], ["platform", "Xbox One"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.976607"], ["updated_at", "2019-12-14 23:54:15.976607"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.3ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Day of Defeat"], ["genre", "Action"], ["platform", "Linux"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.979940"], ["updated_at", "2019-12-14 23:54:15.979940"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.3ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Counter-Strike: Global Offensive"], ["genre", "Multiplayer online battle arena"], ["platform", "Nintendo Switch"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.983609"], ["updated_at", "2019-12-14 23:54:15.983609"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.3ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Metroid Prime"], ["genre", "Real-time strategy"], ["platform", "Nintendo Entertainment System"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.987462"], ["updated_at", "2019-12-14 23:54:15.987462"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.3ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Animal Crossing"], ["genre", "Massively multiplayer online"], ["platform", "Game Boy"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.991455"], ["updated_at", "2019-12-14 23:54:15.991455"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.3ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Counter-Strike: Source"], ["genre", "Real-time tactics"], ["platform", "Windows"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:15.996951"], ["updated_at", "2019-12-14 23:54:15.996951"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.4ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Starcraft"], ["genre", "Music"], ["platform", "Xbox"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:16.001104"], ["updated_at", "2019-12-14 23:54:16.001104"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Luigi's Mansion"], ["genre", "Real-time strategy"], ["platform", "Nintendo Entertainment System"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:16.005120"], ["updated_at", "2019-12-14 23:54:16.005120"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Left 4 Dead"], ["genre", "Dungeon crawl"], ["platform", "PlayStation Portable"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:16.008208"], ["updated_at", "2019-12-14 23:54:16.008208"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.4ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Call of Duty: Black Ops II"], ["genre", "Trivia"], ["platform", "Xbox 360"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:16.011896"], ["updated_at", "2019-12-14 23:54:16.011896"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGamer Create (0.2ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "F.E.A.R."], ["genre", "Roguelike"], ["platform", "Wii U"], ["image", "https://placehold.it/50x50.png"], ["created_at", "2019-12-14 23:54:16.015480"], ["updated_at", "2019-12-14 23:54:16.015480"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/gamers" for ::1 at 2019-12-14 18:55:15 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamersController#index as HTML
+  [1m[36mGamer Load (4.7ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 12.9ms | ActiveRecord: 12.2ms | Allocations: 8841)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 19:17:23 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (0.7ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.7ms | Allocations: 3839)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 19:17:33 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (0.4ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 3783)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 19:18:11 -0500
+Processing by GamersController#index as HTML
+  [1m[36mGamer Load (0.2ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.2ms | Allocations: 3763)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 19:19:21 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (0.6ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 3765)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 19:20:02 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (2.7ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 2.7ms | Allocations: 3783)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 19:20:12 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (2.8ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 2.8ms | Allocations: 3783)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 19:40:47 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (0.6ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 215ms (Views: 212.1ms | ActiveRecord: 0.6ms | Allocations: 3829)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 19:46:03 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (48.8ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 90ms (Views: 32.2ms | ActiveRecord: 55.6ms | Allocations: 8846)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 20:54:07 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (7.3ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 19.5ms | ActiveRecord: 7.3ms | Allocations: 3839)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 20:58:05 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (1.2ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 1.2ms | Allocations: 3784)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 20:58:12 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (1.0ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 1.0ms | Allocations: 3784)
+
+
+Started GET "/gamers" for ::1 at 2019-12-14 21:33:55 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (0.9ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 24.5ms | ActiveRecord: 0.9ms | Allocations: 3839)
+
+
