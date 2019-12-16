@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+div.section-header{
+  Color: #FFFFFF;
+  font-size: 14px;
+  Background: #F00000;
+  Margin: 0px 0px 16px;
+  Padding: 22px 20px;
+}
+
+
+@media (min-width: 640px){
+div.section-header{
+  Padding: 22px 20px;
+}
+h2.section-header_title{
+  font-family: 'Play', sans-serif;
+}
+div.section-header_title{
+  font-size: 32px;
+  line-height: 25px;
+}
+}

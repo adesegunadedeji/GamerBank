@@ -23,7 +23,7 @@ class App extends Component {
             body: JSON.stringify(formData),
             headers:{
                 "Content-Type": "application/json",
-                "acccept": "application/json"
+                "accept": "application/json"
             }
         })
         const data = await newGame.json();

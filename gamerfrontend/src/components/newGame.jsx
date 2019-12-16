@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Form, Row, Col, Button} from 'react-bootstrap'
+import { Button, Col, Form, FormGroup, Label, Input} from 'reactstrap';
 
 class NewGame extends Component{
     constructor(props){
@@ -19,7 +19,6 @@ class NewGame extends Component{
     }
 
     handleSubmit=(e)=>{
-     
         e.preventDefault();
         console.log("SUBMITTED FORM")
         this.props.createGame(this.state);
@@ -29,17 +28,33 @@ class NewGame extends Component{
         return(
             <div>
               <h1>New Game</h1> 
-              <Form onSubmit={this.handleSubmit}>
-  <Row>
-    <Col>
-      <Form.Control  name= "title" placeholder="Title" onChange={this.handleChange} />
-    </Col>
-    <Col>
-      <Form.Control  name= "genre" placeholder="Genre"  onChange={this.handleChange}/>
-    </Col>
-  </Row>
-  <Button>Add Game</Button>
-</Form>
+              <Form onSubmit = {this.handleSubmit}>
+            <FormGroup row>
+                <Label for="exampleEmail2" sm={2}> Game Title</Label>
+                <Col sm={5}>
+                <Input type="text" name="title" onChange={this.handleChange}/>
+                </Col>
+            </FormGroup>
+            <FormGroup row>
+                <Label for="exampleEmail2" sm={2}> Genre</Label>
+                <Col sm={5}>
+                <Input type="text" name="genre"onChange={this.handleChange}/>
+                </Col>
+            </FormGroup>
+        <FormGroup row>
+          <Label for="exampleEmail2" sm={2}>Platform</Label>
+          <Col sm={5}>
+                <Input type="text" name="platform" onChange={this.handleChange}/>
+                </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label for="exampleEmail2" sm={2}>image</Label>
+          <Col sm={5}>
+                <Input type="text" name="image" onChange={this.handleChange}/>
+                </Col>
+        </FormGroup>
+        <Button>Add Game</Button>
+        </Form>
     </div>
         )
     }
