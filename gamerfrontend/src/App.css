@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+
+.homepageimage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+header{
+  background-color:orange;
+}
+aside{
+  background-color: blue;
+}
+footer{
+  background-color:green;
+}
+
+
+.layout1 .container{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  grid-gap:10px;
+}
+.layout1 .container main{
+  display: flex;
+}
+
+.layout1 .container main section{
+  flex: 2;
+  margin-right: 10px;
+}
+.homepageimage{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.layout1 .container main aside{
+  flex: 1;
+}
+
+.footer{
+  background: blue;
+}
