@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+import NavbarExample from './components/Navbar'
 
 import './App.css';
 import {
@@ -7,7 +8,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Landing from './components/landing'
+import Landing from './components/About'
 import Gamelist from './components/gamelist'
 import Home from './components/Home'
 import NewGame from './components/newGame'
@@ -43,6 +44,7 @@ class App extends Component {
 render(){
   return (
     <Router>
+    <NavbarExample/>
       <div>
         <nav>
           <ul>
@@ -64,12 +66,12 @@ render(){
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/landing">
+          <Route path="/about">
             <Landing/>
           </Route>
           <Route path="/new" render={(props)=> <NewGame {...props}
      createGame={this.createGame}/>}/>
-          <Route path="/Gamelist">
+          <Route path="/listings">
             <Gamelist />
           </Route>
           <Route path="/">

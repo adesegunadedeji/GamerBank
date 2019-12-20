@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import { Button, Col, Form, FormGroup, Label, Input} from 'reactstrap';
+import { Redirect } from 'react-router-dom';
 
 class NewGame extends Component{
     constructor(props){
@@ -8,9 +9,11 @@ class NewGame extends Component{
             title: "",
             genre: "",
             platform: "",
-            image: ""
+            image: "",
+            redirect: false,
         }
     }
+
     handleChange=(e)=>{
         this.setState({
             [e.target.name]: e.target.value
@@ -18,12 +21,25 @@ class NewGame extends Component{
         console.log(e.target.value)
     }
 
+    setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+      }
+
+      renderRedirect = () => {
+        if (this.state.redirect) {
+          return <Redirect to='/gamelist' />
+        }
+      }
+
     handleSubmit=(e)=>{
         e.preventDefault();
         console.log("SUBMITTED FORM")
         this.props.createGame(this.state);
-    }
+        this.renderRedirect();
 
+    }
     render(){
         return(
             <div>

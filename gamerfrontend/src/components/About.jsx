@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-class Landing extends Component {
+class About extends Component {
 
 
     render(){
@@ -12,4 +12,4 @@ class Landing extends Component {
     }
 }
 
-export default Landing
+export default About
