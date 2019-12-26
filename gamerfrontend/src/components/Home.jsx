@@ -3,16 +3,17 @@ import gamer1 from '../images/gamerImage1.jpeg'
 
 const Home= (props) => {
   return (
-    <div class="layout1 layouts">
-    <div class="container">
-      <main>
-        <section>Section
-            <img src={gamer1} alt="image1" className="homepageimage"/>
-        </section>
-        <aside>Aside</aside>
-      </main>
-      <footer>Footer</footer>
-    </div>
+  <div className="home">
+      <div className="header">
+          HEADER
+      </div>
+      <div className="aside">
+          ASIDE
+      </div>
+      <div className="masthead">
+        MAST HEAD
+      </div>
+      <footer>©2019 Gamer Bank Privacy | Security | Terms and Conditions</footer>
   </div>
   );
 };

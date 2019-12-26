@@ -45,42 +45,58 @@
   object-position: center;
 }
 
-header{
+.header{
   background-color:orange;
+  grid-column: 1/3;
+  grid-row: 1/2;
 }
-aside{
+.aside{
   background-color: blue;
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+.masthead{
+  background-color:red;
+  grid-row: 2/4;
 }
 footer{
-  background-color:green;
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  grid-column: 1/3;
+  grid-row: 4/5;
 }
 
 
-.layout1 .container{
+.home{
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:auto 1fr 1fr 1fr;
   grid-gap:10px;
 }
-.layout1 .container main{
-  display: flex;
-}
 
-.layout1 .container main section{
+
+
+
+
+/* .layout1.container main{
+  display: flex;
+} */
+
+/* .layout1.container main section{
   flex: 2;
   margin-right: 10px;
-}
-.homepageimage{
+} */
+/* .homepageimage{
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
+} */
 
-.layout1 .container main aside{
+/* .layout1.container main aside{
   flex: 1;
-}
-
-.footer{
-  background: blue;
-}
+} */
