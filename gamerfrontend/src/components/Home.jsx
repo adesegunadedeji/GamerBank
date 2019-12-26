@@ -1,14 +1,25 @@
 import React from 'react';
-import gamer1 from '../images/gamerImage1.jpeg'
+import { Jumbotron, Container} from 'reactstrap';
+import gamer3 from '../images/gamer3.jpeg'
 
 const Home= (props) => {
   return (
   <div className="home">
-      <div className="header">
-          HEADER
+
+      <div className="header">  
+      <Jumbotron fluid>
+        <Container fluid>
+          <h2 className="display-3">Gamer Bank</h2>
+          <p className="lead">THE BEST PLACE TO PLAY</p>
+          <a class="btn btn-primary" href="#" role="button">See all</a>
+        </Container>
+      </Jumbotron>
       </div>
       <div className="aside">
-          ASIDE
+          <h3>About US</h3>
+          <p> Gamerbank creates and delivers more entertaiment experiences 
+              to more people than anyone else on earth</p>
+              <a href= "/about">LEARN MORE</a>
       </div>
       <div className="masthead">
         MAST HEAD
