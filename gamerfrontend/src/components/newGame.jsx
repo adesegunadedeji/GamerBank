@@ -44,7 +44,7 @@ class NewGame extends Component{
         return(
             <div className="Newform">
               <div className='testNew'></div>
-              <div className="formGroup">
+              <div>
                 <h1 className="formh1">New Form</h1>
               <Form onSubmit = {this.handleSubmit} className="formsection">
             <FormGroup row>
@@ -71,8 +71,8 @@ class NewGame extends Component{
                 <Input type="text" name="image" onChange={this.handleChange}/>
                 </Col>
         </FormGroup>
-        </Form>
         <Button className="formbutton">Add Game</Button>
+        </Form>
         </div>
         <div className='testNew'></div>
         <div className='train2'></div>
