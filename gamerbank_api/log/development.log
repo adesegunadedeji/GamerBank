@@ -1034,3 +1034,120 @@ Processing by GamersController#index as */*
 Completed 200 OK in 59ms (Views: 35.8ms | ActiveRecord: 0.6ms | Allocations: 1155)
 
 
+Started GET "/gamers" for ::1 at 2019-12-27 08:40:35 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (8.6ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 101ms (Views: 72.8ms | ActiveRecord: 8.6ms | Allocations: 1156)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 10:14:51 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (7.5ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 107ms (Views: 77.2ms | ActiveRecord: 7.5ms | Allocations: 1155)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 11:36:18 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (6.4ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 86ms (Views: 61.0ms | ActiveRecord: 6.4ms | Allocations: 1157)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 11:50:40 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (0.6ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 19.6ms | ActiveRecord: 0.6ms | Allocations: 1155)
+
+
+Started POST "/gamers" for ::1 at 2019-12-27 12:37:45 -0500
+Processing by GamersController#create as JSON
+  Parameters: {"title"=>"", "genre"=>"", "platform"=>"", "image"=>"", "redirect"=>false, "gamer"=>{"title"=>"", "genre"=>"", "platform"=>"", "image"=>""}}
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gamers_controller.rb:20:in `create'
+  [1m[36mGamer Create (34.1ms)[0m  [1m[32mINSERT INTO "gamers" ("title", "genre", "platform", "image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", ""], ["genre", ""], ["platform", ""], ["image", ""], ["created_at", "2019-12-27 17:37:45.951368"], ["updated_at", "2019-12-27 17:37:45.951368"]]
+  ↳ app/controllers/gamers_controller.rb:20:in `create'
+  [1m[35m (28.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gamers_controller.rb:20:in `create'
+Completed 201 Created in 338ms (Views: 41.1ms | ActiveRecord: 65.4ms | Allocations: 2686)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 12:38:55 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (117.2ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 179ms (Views: 49.4ms | ActiveRecord: 117.2ms | Allocations: 1284)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 12:38:57 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (0.9ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.9ms | Allocations: 1240)
+
+
+Started DELETE "/gamers/24" for ::1 at 2019-12-27 12:39:02 -0500
+Processing by GamersController#destroy as */*
+  Parameters: {"id"=>"24"}
+  [1m[36mGamer Load (15.2ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers" WHERE "gamers"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/gamers_controller.rb:44:in `set_gamer'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/gamers_controller.rb:38:in `destroy'
+  [1m[36mGamer Destroy (10.3ms)[0m  [1m[31mDELETE FROM "gamers" WHERE "gamers"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/gamers_controller.rb:38:in `destroy'
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/gamers_controller.rb:38:in `destroy'
+Completed 204 No Content in 608ms (ActiveRecord: 35.4ms | Allocations: 3754)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 12:49:37 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (6.2ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 46ms (Views: 34.6ms | ActiveRecord: 6.2ms | Allocations: 1155)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 12:49:41 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (21.9ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 23.7ms | ActiveRecord: 21.9ms | Allocations: 1095)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 13:29:46 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (8.2ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 80ms (Views: 62.4ms | ActiveRecord: 8.2ms | Allocations: 1155)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 13:30:27 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (3.9ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 18.7ms | ActiveRecord: 3.9ms | Allocations: 1094)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 13:30:30 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (6.3ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 626ms (Views: 619.6ms | ActiveRecord: 6.3ms | Allocations: 1098)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 13:33:09 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (10.0ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 52ms (Views: 20.5ms | ActiveRecord: 10.0ms | Allocations: 1094)
+
+
+Started GET "/gamers" for ::1 at 2019-12-27 13:33:15 -0500
+Processing by GamersController#index as */*
+  [1m[36mGamer Load (1.1ms)[0m  [1m[34mSELECT "gamers".* FROM "gamers"[0m
+  ↳ app/controllers/gamers_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 1.1ms | Allocations: 1094)
+
+

@@ -42,9 +42,11 @@ class NewGame extends Component{
     }
     render(){
         return(
-            <div>
-              <h1>New Game</h1> 
-              <Form onSubmit = {this.handleSubmit}>
+            <div className="Newform">
+              <div className='testNew'></div>
+              <div className="formGroup">
+                <h1 className="formh1">New Form</h1>
+              <Form onSubmit = {this.handleSubmit} className="formsection">
             <FormGroup row>
                 <Label for="exampleEmail2" sm={2}> Game Title</Label>
                 <Col sm={5}>
@@ -64,13 +66,17 @@ class NewGame extends Component{
                 </Col>
         </FormGroup>
         <FormGroup row>
-          <Label for="exampleEmail2" sm={2}>image</Label>
+          <Label for="exampleEmail2" sm={2}>Image</Label>
           <Col sm={5}>
                 <Input type="text" name="image" onChange={this.handleChange}/>
                 </Col>
         </FormGroup>
-        <Button>Add Game</Button>
         </Form>
+        <Button className="formbutton">Add Game</Button>
+        </div>
+        <div className='testNew'></div>
+        <div className='train2'></div>
+        <div class="footer">©2019 Gamer Bank Privacy | Security | Terms and Conditions</div>
     </div>
         )
     }

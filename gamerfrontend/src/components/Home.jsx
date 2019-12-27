@@ -1,6 +1,11 @@
 import React from 'react';
 import { Jumbotron, Container} from 'reactstrap';
-import gamer3 from '../images/gamer3.jpeg'
+import gamestop from '../images/gamestop.png'
+import xbox from '../images/XBOX.png'
+import ps4 from '../images/ps4.jpg'
+import nairabet from '../images/nairabet.png'
+import facebook from '../images/Facebook.jpg'
+
 
 const Home= (props) => {
   return (
@@ -16,15 +21,22 @@ const Home= (props) => {
       </Jumbotron>
       </div>
       <div className="aside">
-          <h3>About US</h3>
+           <h2> About US</h2>
           <p> Gamerbank creates and delivers more entertaiment experiences 
               to more people than anyone else on earth</p>
               <a href= "/about">LEARN MORE</a>
       </div>
       <div className="masthead">
-        MAST HEAD
+      <h2>OUR PARTNERS </h2>
+       <div className="flexPartners" > 
+       <img src ={gamestop} className="partnersImage"/>
+       <img src ={ps4}  className="partnersImage"/>
+       <img src ={xbox}  className="partnersImage"/>
+       <img src ={nairabet}  className="partnersImage"/>
+       <img src ={facebook}  className="partnersImage"/>
+       </div>
       </div>
-      <footer>©2019 Gamer Bank Privacy | Security | Terms and Conditions</footer>
+      <div className="footer">©2019 Gamer Bank Privacy | Security | Terms and Conditions</div>
   </div>
   );
 };
