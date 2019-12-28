@@ -65,32 +65,29 @@ class gameList extends Component{
         let gamer = this.state.gamer.map(gamer => {
             console.log("gamer", gamer)
             return(
-                <div>
-                <Col sm ="4" key = {gamer.id} >
+                <Col sm ="2" key={gamer.id}>
                 <Card>
                 <CardBody>
-                    <CardImg top width = "50"  src={gamer.image} alt="Card image cap" />
+                    <CardImg top width="100" src={gamer.image} alt="Card image cap" />
                         <h3>{gamer.title}</h3>
             <CardSubtitle>PLATFORM:{gamer.platform}</CardSubtitle>
+            <div className="buttonGroup">
             <EditGame gamer={gamer} updateGames ={this.updateGames}/>
-                        <Button  outline color="danger" onClick={()=>{this.deleteGame(gamer.id)}}>DELETE</Button>
+            <Button  outline color="danger" onClick={()=>{this.deleteGame(gamer.id)}}>DELETE</Button>
+                        </div>
                     </CardBody>
                     </Card>
                     </Col> 
-                    </div>
-                
             )})
         return(
             <div>
-                <div className="section-header">
-                    <h2 className="section-header_title">GAME STORE</h2>
-                </div>
+            <h3 className="section-header_title">GAME STORE</h3>
+            <div>
                <Row>
                 {gamer}
                 </Row>
-
-            </div>
-        )
+                </div>
+            </div>)
     }
 
 }

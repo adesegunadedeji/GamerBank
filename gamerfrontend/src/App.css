@@ -140,7 +140,9 @@ label{
 
 }
 input.form-control{
-  justify-self: center;
+  margin: 5px;
+  cursor: pointer;
+  width: 150%
 }
 /* .layout1.container main{
   display: flex;
@@ -174,3 +176,20 @@ input.form-control{
   font-family: 'Orbitron', sans-serif;
   text-align: center;
  }
+
+div.card-subtitle, h3{
+  font-family: 'Orbitron', sans-serif;
+}
+button.btn.btn-danger,button.btn.btn-outline-danger{
+  font-family: 'Orbitron', sans-serif;
+  padding: 2px;
+  margin: 5px;
+}
+
+.buttonGroup{
+  display: inline;
+}
+
+div.card{
+  display: flex;
+}
